@@ -1,0 +1,54 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA3JlyS8SWvwt9oKa3Msx9YzIMvao7fuybTQ&s" %>
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <%= link_to "New List", new_list_path, class: "btn" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag "https://media.licdn.com/dms/image/v2/D4D03AQGeRc4VXjmnRQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728378998483?e=1738195200&v=beta&t=_ACJJ2rHIfiPExDl08qEl3nwk_UmcE_7uAGynzcXIuI", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          </li>
+        <%# end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://ois.arts-in-the-city.com/wp-content/uploads/2020/04/drive-in-cinema-confinement--1024x644.jpg);">
+  <div class="container text-center">
+    <h1>Save any kind of movies</h1>
+    <a class="btn btn-success" href="#">Apply now</a>
+  </div>
+</div>
+
+<div class="lists-container">
+  <a class="btn btn-link">My lists</a>
+  <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://www.europeanstudios.fr/wp-content/uploads/2024/02/thriller-film-genre.jpg')">
+      <%= link_to list_path(list), class: "card-link" do %>
+        <h3><%= list.name %></h3>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    @ApplyWacthList</i> at NuajWL
+  </div>
+</div>
