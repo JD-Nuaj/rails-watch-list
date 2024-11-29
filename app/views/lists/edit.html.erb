@@ -1,5 +1,10 @@
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.input :image, as: :file %>
-  <%= f.submit "Update List" %>
+<% if @list.present? %>
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.input :image, as: :file %>
+    <%= f.submit "Update List" %>
+  <% end %>
+<% else %>
+  <p>List not found.</p>
 <% end %>
+
