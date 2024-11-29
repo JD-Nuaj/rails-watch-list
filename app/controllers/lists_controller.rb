@@ -20,6 +20,10 @@ class ListsController < ApplicationController
     end
   end
 
+  def edit
+    @list = List.find(params[:id])
+  end
+
   def update
     @list = List.find(params[:id])
     if @list.update(list_params)
