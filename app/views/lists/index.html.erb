@@ -32,7 +32,7 @@
 <div class="lists-container">
   <a class="btn btn-link">My lists</a>
   <% @lists.each do |list| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://www.europeanstudios.fr/wp-content/uploads/2024/02/thriller-film-genre.jpg')">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= url_for(list.photo) %>')">
       <%= link_to list_path(list), class: "card-link" do %>
         <h3><%= list.name %></h3>
       <% end %>
