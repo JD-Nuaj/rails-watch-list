@@ -2,7 +2,7 @@
 
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <div class="form-group">
-    <%= f.label :movie_id, "Choose a movie" %>
+    <%= f.label :movie_id %>
     <%= f.association :movie, collection: Movie.all, prompt: "Select a movie", class: "form-control" %>
   </div>
 
